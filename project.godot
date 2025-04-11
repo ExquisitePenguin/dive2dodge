@@ -14,6 +14,20 @@ config/name="Dive2Dodge"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalTime="*res://time.tscn"
+Bird="*res://bird.gd"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+
+[global_group]
+
+Bird=""
+
 [rendering]
 
 renderer/rendering_method="mobile"

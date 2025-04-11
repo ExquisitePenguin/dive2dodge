@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://de1rhekb6vuft"]
+
+[ext_resource type="Texture2D" uid="uid://b64g3pxpkn3d" path="res://icon.svg" id="1_6nt3j"]
+[ext_resource type="Script" path="res://character_body.gd" id="1_pa1eb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gba61"]
+size = Vector2(129, 209)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2j1v"]
+size = Vector2(119.5, 206.5)
+
+[node name="Player" type="Node2D"]
+
+[node name="CharacterBody" type="CharacterBody2D" parent="."]
+script = ExtResource("1_pa1eb")
+
+[node name="PlayerSprite" type="Sprite2D" parent="CharacterBody"]
+position = Vector2(0, 40.5)
+scale = Vector2(1, 1.63281)
+texture = ExtResource("1_6nt3j")
+
+[node name="CharacterCollision" type="CollisionShape2D" parent="CharacterBody"]
+position = Vector2(-0.5, 40.5)
+shape = SubResource("RectangleShape2D_gba61")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody"]
+
+[node name="EntityCollision" type="CollisionShape2D" parent="CharacterBody/Area2D"]
+position = Vector2(0, 42)
+shape = SubResource("RectangleShape2D_d2j1v")
+debug_color = Color(0.82492, 0.361928, 0.445339, 0.42)
+
+[connection signal="area_entered" from="CharacterBody/Area2D" to="CharacterBody" method="_on_area_2d_area_entered"]

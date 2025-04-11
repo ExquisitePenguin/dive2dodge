@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://byntxqlpjls3g"]
+
+[ext_resource type="PackedScene" uid="uid://de1rhekb6vuft" path="res://player.tscn" id="1_pbss1"]
+[ext_resource type="Script" path="res://main.gd" id="1_qwn07"]
+[ext_resource type="PackedScene" uid="uid://cd52m6pkj8cst" path="res://bird.tscn" id="2_kxo61"]
+[ext_resource type="PackedScene" uid="uid://cd730avsgw1u0" path="res://time.tscn" id="4_ucfv2"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_qwn07")
+
+[node name="Player" parent="." instance=ExtResource("1_pbss1")]
+
+[node name="Time" parent="." instance=ExtResource("4_ucfv2")]
+
+[node name="Bird" parent="." instance=ExtResource("2_kxo61")]
+
+[node name="Bird2" parent="." instance=ExtResource("2_kxo61")]
+
+[node name="Bird3" parent="." instance=ExtResource("2_kxo61")]

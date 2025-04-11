@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cd730avsgw1u0"]
+
+[ext_resource type="Script" path="res://time.gd" id="1_1fhmu"]
+
+[node name="Time" type="Timer"]
+wait_time = 4000.0
+script = ExtResource("1_1fhmu")
